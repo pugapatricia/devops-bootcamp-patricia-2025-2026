@@ -1,5 +1,7 @@
 # 🚀 DevOps Bootcamp 2025-2026
 
+**Autora:** Patricia Marie Puga Sanjur 👩‍💻  
+
 Este repositorio contiene **todas mis prácticas y proyectos** realizados durante el **Bootcamp de DevOps impartido por Lemoncode**.  
 Aquí podrás ver mis ejercicios de Bash, contenedores Docker, Kubernetes, CI/CD, Cloud, Infraestructura como Código, Observabilidad y conceptos de IA generativa.  
 
