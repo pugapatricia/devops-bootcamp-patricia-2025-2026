@@ -124,4 +124,4 @@ Al finalizar el reto:
 
 ## Conclusión
 
-Este reto permitió contenerizar el backend y entender la comunicación entre contenedores dentro de una red Docker, utilizando nombres de servicio en lugar de localhost y resolviendo problemas comunes de conectividad.
+Este reto permitió contenerizar el backend y entender la comunicación entre contenedores dentro de una red Docker, utilizando nombres de servicio en lugar de localhost.
