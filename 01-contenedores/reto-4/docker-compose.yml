@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - lemoncode-network
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=mongodb://mongodb:27017
+      - DATABASE_NAME=LemoncodeCourseDb
+      - HOST=0.0.0.0
+      - PORT=5000
+    depends_on:
+      - mongodb
+    networks:
+      - lemoncode-network
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://backend:5000/api/classes
+    depends_on:
+      - backend
+    networks:
+      - lemoncode-network
+
+volumes:
+  mongodb-data:
+
+networks:
+  lemoncode-network:
